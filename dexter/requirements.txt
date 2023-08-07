@@ -1,0 +1,8 @@
+langchain
+google-search-results
+openai
+websockets
+django
+djangorestframework
+django-cors-headers
+djangorestframework_simplejwt

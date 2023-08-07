@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "8570323b-5a2f-4d0e-a6ef-5c90a784b935",
+		"name": "DexGPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10525306"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"demo@example.com\",\n    \"password\": \"demo@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/signup/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"demo@example.com\",\n    \"password\": \"demo@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/login/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4ODU4NTk1MywiaWF0IjoxNjg4NDk5NTUzLCJqdGkiOiI0ZjIxOGRhMjJlMWM0MTAxYWQzMDY2NGU1ODk5MTMwZSIsInVzZXJfaWQiOjJ9.kQarwRwbCSqbwT8qX-XrXxEL7qSqMPXxuionujDXAsw\"\n}"
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/token/refresh/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prepare",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"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\"\n}"
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/create/dex/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"create",
+						"dex",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"instance_id\": \"42b37e84-c36d-4af3-b69e-c00fb7a0d9e9\",\n    \"query\": \"my name is saurabh pandey\"\n}"
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/query/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"query",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Prompt",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key: \"SomeKeyValue\"\n}"
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/change/prompt/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"change",
+						"prompt",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Prompt",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4NTAxMTQ5LCJpYXQiOjE2ODg1MDA4NDksImp0aSI6IjZjY2NhNTVmNDg0NDRjZmFhMjVhMjE1ZWNlYzc3ZTMzIiwidXNlcl9pZCI6Mn0.6HO3m_hg-pMxT_4DmrrkCiZvVOxv_r9xronQlXS97lk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prompt_text\": \"Dexter takes input as jsonObject can also be a js object, if any input given apart from it reply back as 'I only take json input and create a Javascript Interface' \\nDexter takes the input and create a interface form the json, he make sure all interfaces name starts with I\\nDexter provide the complete code for interface.\\nIf the json is a nested json with more than 1 key or is an array then create a sperate interface.\\nIf there is no name provided for the variable Dexter takes name as data.\",\n    \"prompt_name\": \"JS Interface Prompt\"\n}"
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/add/prompt/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"add",
+						"prompt",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prompts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4NTAxMTQ5LCJpYXQiOjE2ODg1MDA4NDksImp0aSI6IjZjY2NhNTVmNDg0NDRjZmFhMjVhMjE1ZWNlYzc3ZTMzIiwidXNlcl9pZCI6Mn0.6HO3m_hg-pMxT_4DmrrkCiZvVOxv_r9xronQlXS97lk",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{APP_SERVER_ADDRESS}}/prompts/",
+					"host": [
+						"{{APP_SERVER_ADDRESS}}"
+					],
+					"path": [
+						"prompts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "APP_SERVER_ADDRESS",
+			"value": "http://localhost:8888"
+		}
+	]
+}
